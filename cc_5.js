@@ -18,3 +18,13 @@ function calculateOvertimePay(rate, hours) {
     const overtimeHours = Math.max(0, hours - 40);
     return rate * 1.5 * overtimeHours;
   }
+  
+  // Step 5: Taxes (deduct 15% from gross)
+  function calculateTaxes(grossPay) {
+    return grossPay * 0.15;
+  }
+  
+  // Optional helper: round to 2 decimals for nicer output
+  function roundMoney(amount) {
+    return Number(amount.toFixed(2));
+  }
